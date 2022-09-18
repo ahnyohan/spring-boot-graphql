@@ -1,0 +1,22 @@
+
+type Member {
+    id: Int!
+    name: String
+    age: Int
+}
+
+
+type Query {
+    getMember(id: Int): Member
+    getMemberAll: [Member]
+}
+
+input SaveMember {
+    id: Int
+    name: String
+    age: Int
+}
+
+type Mutation {
+    SaveMemberInfo(saveMemberInfo : SaveMember): Member!
+}
